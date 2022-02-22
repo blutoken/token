@@ -1,4 +1,5 @@
 body {
+  background-color: #8ea6bf;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,70 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.all {
+  font-family: courier;
+  background-color: #8ea6bf;
+}
+
+.button-group {
+  float: right;
+}
+
+.button-individual {
+  padding-right: 8px;
+  padding-top: 8px;
+}
+
+.input-individual {
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: #8888cc;
+  font-family: courier;
+  background-color: #006fd6;
+  color: #eeeeff;
+  font-size: 20px;
+}
+
+.input-individual:hover {
+  background-color: #eeeeff;
+  color: #006fd6;
+}
+
+.table-format {
+  padding-left: 8px;
+  padding-top: 8px;
+}
+
+.activity-link {
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: 15px;
+  color: #006fd6;
+}
+
+.activity-link:hover {
+  color: #2288e8;
+}
+
+.token-label-link {
+  text-decoration: none;
+  color: #003888;
+}
+
+.token-label-link:hover {
+  color: #2288e8;
+}
+
+.token-label {
+  font-family: sans-serif;
+  color: #003888;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.token-value {
+  font-size: 20px;
+  padding-left: 8px;
 }
