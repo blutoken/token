@@ -15,13 +15,14 @@ export default function App() {
   });
 
   const [link, setLink] = useState({
-    uniToken: "-",
-    uniLP: "-",
-    esWallet: "-",
-    esToken: "-",
-    esTokenWallet: "-",
-    esLP: "-",
-    esLPWallet: "-"
+    uniToken: `https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=${bluTokenAddress}&chain=mainnet`,
+    uniLP: `https://app.uniswap.org/#/add/v2/${bluTokenAddress}/ETH?chain=mainnet`,
+    esWallet: "./",
+    esToken: "./",
+    esTokenWallet: ",/",
+    esLP: "./",
+    esLPWallet: "./",
+    esTarget: "_self"
   });
 
 
@@ -66,7 +67,8 @@ export default function App() {
         esToken: `https://etherscan.io/address/${bluTokenAddress}`,
         esLP: `https://etherscan.io/address/${bluLPAddress}`,
         esTokenWallet: `https://etherscan.io/token/${bluTokenAddress}?a=${holder}`,
-        esLPWallet: `https://etherscan.io/token/${bluLPAddress}?a=${holder}`
+        esLPWallet: `https://etherscan.io/token/${bluLPAddress}?a=${holder}`,
+        esTarget: "_blank"
       });
 
     };
@@ -97,13 +99,13 @@ export default function App() {
       <table className="table-format">
         <tr>
           <td className="token-label">
-            <a className="token-label-link" target="_blank" rel="noreferrer" href={link.esWallet}>Your Wallet</a>:
+            <a className="token-label-link" target={link.esTarget} rel="noreferrer" href={link.esWallet}>Your Wallet</a>:
           </td>
           <td className="token-value">{holderInfo.addressTrunc}</td>
         </tr>
         <tr>
           <td className="token-label">
-            <a className="token-label-link" target="_blank" rel="noreferrer" href={link.esToken}>BLU Tokens</a>:
+            <a className="token-label-link" target={link.esTarget} rel="noreferrer" href={link.esToken}>BLU Tokens</a>:
           </td>
           <td className="token-value">{holderInfo.tokenBalance}&nbsp;
             <a className="activity-link" target="_blank" rel="noreferrer" href={link.esTokenWallet}>
@@ -113,10 +115,10 @@ export default function App() {
         </tr>
         <tr>
           <td className="token-label">
-            <a className="token-label-link" target="_blank" rel="noreferrer" href={link.esLP}>LP Tokens</a>:
+            <a className="token-label-link" target={link.esTarget} rel="noreferrer" href={link.esLP}>LP Tokens</a>:
           </td>
           <td className="token-value">{holderInfo.lpBalance}&nbsp;
-            <a className="activity-link" target="_blank" rel="noreferrer" href={link.esLPWallet}>
+            <a className="activity-link" target={link.esTarget} rel="noreferrer" href={link.esLPWallet}>
               {`${holderInfo.activityText}`}
             </a>
           </td>
